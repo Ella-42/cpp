@@ -6,14 +6,11 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:07:18 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/01/22 15:31:19 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/01/25 19:02:18 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-
-#include "Contacts.hpp"
+#include "contact_list.h"
 
 int	main(void)
 {
@@ -25,7 +22,7 @@ int	main(void)
 		std::string	in;
 		std::getline(std::cin, in);
 		if (in == "ADD")
-			;
+			Contact	new_contact;
 		else if (in == "SEARCH")
 			;
 		else if (in == "EXIT")

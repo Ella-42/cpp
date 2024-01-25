@@ -6,7 +6,7 @@
 #    By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 02:14:32 by lpeeters          #+#    #+#              #
-#    Updated: 2024/01/22 14:06:17 by lpeeters         ###   ########.fr        #
+#    Updated: 2024/01/25 19:41:40 by lpeeters         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ source_files = ${shell find ./ -name "*.cpp"}
 
 header_files = ${shell find ./ -name "*.hpp" -o -name "*.h"}
 
-header_file_directories = ${foreach header_path,${header_files},-I ${dir ${header_path}}}
+header_includes = ${sort ${foreach header_path,${header_files},-I ${dir ${header_path}}}}
 
 object_directory = objects/
 
@@ -50,7 +50,7 @@ ${program_name}: ${source_files} ${header_files}
 	@echo "${yellow}compiling into executable...${white}"
 	@printf "${up}${clear}"
 	@if [ ! -e "${program_name}" ] && [ ! -d "${object_directory}" ]; then \
-		${compiler} ${compilation_flags} $^ ${header_file_directories} -o ${program_name}; \
+		${compiler} ${compilation_flags} ${source_files} ${header_includes} -o ${program_name}; \
 		if [ $$? -ne 0 ] || [ ! -e "${program_name}" ]; then \
 			echo "${red}error compiling executable${white}"; \
 		else \
@@ -76,7 +76,7 @@ ${object_directory}%.o: %.cpp
 	@if [ $$? -eq 0 ]; then \
 		printf "${up}${clear}"; \
 	fi
-	@${compiler} ${compilation_flags} -c $< ${header_file_directories} -o $@
+	@${compiler} ${compilation_flags} -c $< ${header_includes} -o $@
 	@if [ "./${<:%.cpp=%.o}" = "${lastword ${source_files:%.cpp=%.o}}" ]; then \
 		if [ $$? -ne 0 ]; then \
 			echo "${red}error compiling object files${white}"; \
