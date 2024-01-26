@@ -6,7 +6,7 @@
 #    By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 02:14:32 by lpeeters          #+#    #+#              #
-#    Updated: 2024/01/25 19:41:40 by lpeeters         ###   ########.fr        #
+#    Updated: 2024/01/26 14:26:17 by lpeeters         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ ${program_name}: ${source_files} ${header_files}
 obj: ${object_files}
 
 # Compile object files
-${object_directory}%.o: %.cpp
+${object_directory}%.o: %.cpp ${header_files}
 	@${make_object_directory}
 	@echo "${yellow}compiling $< into an object file...${white}"
 	@if [ $$? -eq 0 ]; then \
