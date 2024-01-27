@@ -6,14 +6,14 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 14:54:58 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/01/27 14:54:59 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/01/27 17:08:17 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include "contact_list.h"
+# include "../contact_list.h"
 
 class	Contact
 {

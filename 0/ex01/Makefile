@@ -6,7 +6,7 @@
 #    By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 02:14:32 by lpeeters          #+#    #+#              #
-#    Updated: 2024/01/26 14:26:17 by lpeeters         ###   ########.fr        #
+#    Updated: 2024/01/27 17:15:34 by lpeeters         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ source_files = ${shell find ./ -name "*.cpp"}
 
 header_files = ${shell find ./ -name "*.hpp" -o -name "*.h"}
 
-header_includes = ${sort ${foreach header_path,${header_files},-I ${dir ${header_path}}}}
+header_directories = ${sort ${foreach header_path,${header_files},${dir ${header_path}}}}
+
+header_includes = ${foreach header_directory,${header_directories},-I ${header_directory}}
 
 object_directory = objects/
 

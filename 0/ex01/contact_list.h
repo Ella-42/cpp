@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 18:21:18 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/01/26 21:14:25 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/01/27 17:08:55 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <cstdlib> //exit
 # include <iomanip> //setw
 
-# include "Contact.hpp" //custom class: Contact
-# include "PhoneBook.hpp" //custom class: PhoneBook
+# include "class/Contact.hpp" //custom class: Contact
+# include "class/PhoneBook.hpp" //custom class: PhoneBook
 
 #endif

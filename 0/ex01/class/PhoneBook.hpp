@@ -6,14 +6,14 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 14:55:04 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/01/27 14:55:06 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/01/27 17:08:28 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include "contact_list.h"
+# include "../contact_list.h"
 
 class	PhoneBook
 {
