@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 18:20:48 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/05 20:24:19 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/06 17:12:24 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <cstdlib> //exit
 
 // Custom Classes
-# include "Zombie.hpp"
+# include "class/Zombie.hpp"
 
 /* functions */
 
