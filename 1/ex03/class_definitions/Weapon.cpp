@@ -6,15 +6,16 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:40:54 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/07 16:55:48 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/07 20:37:35 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../main.h"
 
 // Constructor
-Weapon::Weapon(void)
+Weapon::Weapon(std::string weapon_type)
 {
+	this->type = weapon_type;
 	std::cout << "created object: Weapon\n";
 }
 

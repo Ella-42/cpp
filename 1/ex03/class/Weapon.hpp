@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 13:10:33 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/07 16:56:15 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/07 20:36:16 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class	Weapon
 {
 	public:
 		// Constructor
-		Weapon(void);
+		Weapon(std::string type);
 
 		// Setter
 		void setType(std::string new_type);
