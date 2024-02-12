@@ -6,11 +6,11 @@
 #    By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 02:14:32 by lpeeters          #+#    #+#              #
-#    Updated: 2024/02/05 15:47:09 by lpeeters         ###   ########.fr        #
+#    Updated: 2024/02/12 22:19:44 by lpeeters         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-program_name = apocalypse
+program_name = test
 
 compiler = c++
 
