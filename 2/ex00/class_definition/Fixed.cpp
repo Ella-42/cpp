@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 19:13:06 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/09 19:26:13 by lpeeters         ###   ########.fr       */
+/*   Created: 2024/02/12 20:40:10 by lpeeters          #+#    #+#             */
+/*   Updated: 2024/02/12 21:07:12 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,40 +15,43 @@
 // Constructor
 Fixed::Fixed(void)
 {
-	std::cout << "created object: Fixed\n";
-	;
+	std::cout << "Fixed: creating object\n";
+	this->_fixed_point_number = 0;
 }
 
 // Copy constructor
 Fixed::Fixed(const Fixed& other)
 {
+	std::cout << "Fixed: copying object\n";
 	*this = other;
-	std::cout << "copied object\n";
 }
 
 // Copy assignment operator overload
 Fixed& Fixed::operator = (const Fixed& other)
 {
+	std::cout << "Fixed: copying object (assignement)\n";
 	if (this != &other)
-		this->_fixed_point_number = other._fixed_point_number;
-	std::cout << "copied object(via assignment)\n";
-	return *this;
+		this->_fixed_point_number = other.getRawBits();
+	return (*this);
 }
 
 // Setter
 void Fixed::setRawBits(int const raw)
 {
-	;
+	std::cout << "Fixed: setting values\n";
+	this->_fixed_point_number = raw;
 }
 
 // Getter
 int Fixed::getRawBits(void) const
 {
-	return (0);
+	std::cout << "Fixed: getting values\n";
+	return (this->_fixed_point_number);
 }
 
 // Destructor
 Fixed::~Fixed(void)
 {
-	std::cout << "destroyed object: Fixed\n";
+	std::cout << "Fixed: destroying object\n";
 }
+

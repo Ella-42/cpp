@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 18:53:57 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/09 18:55:03 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/12 16:39:32 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 			 
 /* Custom classes */
 
-# include "class/Fixed.hpp" //Custom class: 
-					   
+# include "class/Fixed.hpp" //Custom class: Fixed
+
 /* Functions */
 
 // 
