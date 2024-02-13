@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 20:40:10 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/12 22:50:28 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/14 00:30:24 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ Fixed::Fixed(void)
 }
 
 // Constructor
-Fixed::Fixed(const int)
+Fixed::Fixed(const int value)
 {
-	;
+	std::cout << "Fixed: creating object (int)\n";
 }
 
 // Constructor
-Fixed::Fixed(const float)
+Fixed::Fixed(const float value)
 {
-	;
+	std::cout << "Fixed: creating object (float)\n";
 }
 
 // Copy constructor
@@ -66,4 +66,3 @@ Fixed::~Fixed(void)
 {
 	std::cout << "Fixed: destroying object\n";
 }
-
