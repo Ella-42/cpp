@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 20:40:10 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/14 15:28:12 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:32:57 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Fixed::Fixed(const int integer_value)
 Fixed::Fixed(const float floating_point_value)
 {
 	std::cout << "Fixed: creating object (float)\n";
-	this->_fixed_point_number = round(floating_point_value * (1 << Fixed::_fractional_bits));
+	this->_fixed_point_number = roundf(floating_point_value * (1 << Fixed::_fractional_bits));
 }
 
 // Copy constructor

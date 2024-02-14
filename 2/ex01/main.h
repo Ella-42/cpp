@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 18:53:57 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/14 15:18:13 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:31:36 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /* Includes */
 
 # include <iostream> //input\output
-# include <cmath> //round
+# include <cmath> //roundf
 			 
 /* Custom classes */
 
