@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 18:54:43 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/13 14:07:40 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/14 15:09:11 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,12 @@ class	Fixed
 
 		// Getter
 		int getRawBits(void) const;
+
+		// Convert to floating-point
+		float toFloat(void) const;
+
+		// Convert to integer
+		int toInt(void) const;
 
 		// Destructor
 		~Fixed(void);
