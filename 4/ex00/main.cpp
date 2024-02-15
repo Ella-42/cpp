@@ -6,13 +6,25 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:05:16 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/15 23:04:07 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/15 23:15:25 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
 // Testing
+//int main()
+//{
+	//const Animal* meta = new Animal();
+	//const Animal* j = new Dog();
+	//const Animal* i = new Cat();
+	//std::cout << j->getType() << " " << std::endl;
+	//std::cout << i->getType() << " " << std::endl;
+	//i->makeSound(); //will output the cat sound!
+	//j->makeSound();
+	//meta->makeSound();
+	//return 0;
+//}
 
 // Colors
 #define DARK_BLUE "\033[34m"
