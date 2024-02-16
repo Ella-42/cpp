@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:03:58 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 19:27:58 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/16 19:54:35 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 class	Animal
 {
 	public:
+		// Constructor
+		Animal(void);
+
 		// Copy constructor
 		Animal(const Animal& other);
 
@@ -29,7 +32,7 @@ class	Animal
 		std::string getType(void) const;
 
 		// Make a sound depending on animal type
-		virtual void makeSound(void) const;
+		virtual void makeSound(void) const = 0;
 
 		// Return address
 		const std::string* getBrainAddress(int i) const;
@@ -44,9 +47,6 @@ class	Animal
 		virtual ~Animal(void);
 
 	protected:
-		// Constructor
-		Animal(void);
-
 		std::string type;
 
 	private:
