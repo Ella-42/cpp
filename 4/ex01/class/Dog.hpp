@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:08:38 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 00:34:46 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/16 16:10:35 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class	Dog : public Animal
 		;
 
 	private:
-		//Brain* _brain;
+		;
 };
 
 #endif

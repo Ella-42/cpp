@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 00:06:08 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 00:22:00 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/16 17:53:33 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,21 @@ Brain& Brain::operator = (const Brain& other)
 	return (*this);
 }
 
+// Setter
+void Brain::setThought(std::string idea, int i)
+{
+	if (i > 100)
+		return (std::cerr << "Error: access violation\n", void());
+	this->_ideas[i] = idea;
+}
+
+// Getter
+const std::string* Brain::getThought(int i)
+{
+	if (i > 100)
+		return (std::cerr << "Error: access violation\n", static_cast<const std::string*>(NULL));
+	return (&(this->_ideas[i]));
+}
 // Destructor
 Brain::~Brain(void)
 {

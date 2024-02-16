@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:05:42 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 00:34:37 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/16 16:10:30 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ Dog::Dog(void) : Animal()
 {
 	std::cout << "Dog: creating object\n";
 	this->type = "Dog";
-	//this->_brain = new Brain();
 }
 
 // Copy constructor
