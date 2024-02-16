@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:05:16 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 19:41:24 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/16 19:49:43 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@
 // Testing
 int main(void)
 {
+	// Testing for invalid assignment (commented out due to compilation error)
+	//const Animal* test = new Animal();
+	//test->makeSound();
+
 	// Constructing
 	std::cout << DARK_BLUE "Constructing" DEFAULT "\n";
 	const Animal* meta[10];
@@ -79,7 +83,7 @@ int main(void)
 	delete(animal);
 
 	// Testing ideas of deep copy
-	std::cout << "\n" DARK_BLUE "Ideas of copied animal" DEFAULT "\n" << animal_copy->getType() << " copy has the following ideas: \n";
+	std::cout << "\n" DARK_BLUE "Ideas of copied animal" DEFAULT "\n" << animal_copy->getType() << " b has the following ideas: \n";
 	for (int i = 0; i < 3; i++)
 		std::cout << animal_copy->getBrainAddress(i) << ": " << animal_copy->getIdea(i) << '\n';
 
@@ -113,18 +117,18 @@ int main(void)
 //{
 	//// Creating an instance of Dog
 	//Dog* originalDog = new Dog();
-	//std::cout << "Original Dog's _brain address: " << originalDog->getBrainAddress(0) << '\n';
+	//std::cout << "Original Dog's _brain address: " << originalDog->getBrainAddress() << '\n';
 
 	//// Making a copy of Dog
 	//Dog* copiedDog = new Dog(*originalDog); // Use the copy constructor
-	//std::cout << "Copied Dog's _brain address: " << copiedDog->getBrainAddress(0) << '\n';
+	//std::cout << "Copied Dog's _brain address: " << copiedDog->getBrainAddress() << '\n';
 
 	//// Making a copy of a copy of Dog
 	//Dog* copiedCopiedDog = new Dog(*originalDog); // Use the copy constructor
-	//std::cout << "CopiedCopied Dog's _brain address: " << copiedCopiedDog->getBrainAddress(0) << '\n';
+	//std::cout << "CopiedCopied Dog's _brain address: " << copiedCopiedDog->getBrainAddress() << '\n';
 
 	//// Comparing addresses
-	//if ((originalDog->getBrainAddress(0) != copiedDog->getBrainAddress(0)) && (originalDog->getBrainAddress(0) != copiedCopiedDog->getBrainAddress(0)) && (copiedDog->getBrainAddress(0) != copiedCopiedDog->getBrainAddress(0)))
+	//if ((originalDog->getBrainAddress() != copiedDog->getBrainAddress()) && (originalDog->getBrainAddress() != copiedCopiedDog->getBrainAddress()) && (copiedDog->getBrainAddress() != copiedCopiedDog->getBrainAddress()))
 	//{
 		//std::cout << "Deep copy confirmed\n";
 	//}
