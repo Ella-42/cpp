@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 20:56:05 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 22:58:20 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/19 22:10:02 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ Cure& Cure::operator = (const Cure& other)
 	return (*this);
 }
 
+// Cloning
 AMateria* Cure::clone(void) const
 {
 	return (new Cure());

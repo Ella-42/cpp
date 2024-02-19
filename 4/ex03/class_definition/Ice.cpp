@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 20:55:46 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 22:54:58 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/19 22:52:04 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ Ice& Ice::operator = (const Ice& other)
 	return (*this);
 }
 
+// Cloning
 AMateria* Ice::clone(void) const
 {
 	return (new Ice());

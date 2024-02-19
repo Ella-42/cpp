@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 20:56:23 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/17 00:30:03 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/19 12:30:45 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class	ICharacter
 		virtual std::string const& getName(void) const = 0;
 
 		// Equip
-		virtual void equip(AMateria* m) const = 0;
+		virtual void equip(AMateria* m) = 0;
 
 		// Unequip
 		virtual void unequip(int idx) = 0;

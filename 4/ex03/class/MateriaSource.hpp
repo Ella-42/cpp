@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 20:56:17 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/17 00:16:46 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/19 22:43:42 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ class	MateriaSource : public IMateriaSource
 
 	private:
 		AMateria* _memory[4];
-		short _index;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 20:55:59 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/17 00:16:07 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/19 23:11:02 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 MateriaSource::MateriaSource(void) : IMateriaSource()
 {
 	std::cout << "MateriaSource: creating object\n";
-	this->_index = 0;
 	for (int i = 0; i < 4; i++)
 		this->_memory[i] = NULL;
 }
@@ -25,7 +24,6 @@ MateriaSource::MateriaSource(void) : IMateriaSource()
 MateriaSource::MateriaSource(const MateriaSource& other) : IMateriaSource(other)
 {
 	std::cout << "MateriaSource: copying object\n";
-	this->_index = other._index;
 	for (int i = 0; i < 4; i++)
 		if (other._memory[i])
 			this->_memory[i] = (other._memory[i])->clone();
@@ -51,20 +49,22 @@ MateriaSource& MateriaSource::operator = (const MateriaSource& other)
 // Create materia
 AMateria* MateriaSource::createMateria(std::string const& type)
 {
-	for (int i = 0; i < this->_index; i++)
-		if ((this->_memory[i])->getType() == type)
-			return ((this->_memory[i])->clone());
-	if (this->_index > 3)
-		return (NULL);
-	return ((this->_memory[this->_index])->clone());
+	int i = 0;
+	while (this->_memory[i] && (this->_memory[i])->getType() != type && i < 4)
+		i++;
+	if (i < 4 && this->_memory[i])
+		return ((this->_memory[i])->clone());
+	return (NULL);
 }
 
 // Learn materia
 void MateriaSource::learnMateria(AMateria* materia)
 {
-	if (this->_index > 3)
-		return ;
-	this->_memory[this->_index++] = materia;
+	int i = 0;
+	while (this->_memory[i] && i < 4)
+		i++;
+	if (i < 4)
+		this->_memory[i] = materia;
 }
 
 // Destructor
