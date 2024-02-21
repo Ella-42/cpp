@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 22:06:49 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/14 22:22:48 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/21 22:00:51 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,6 @@ class	FragTrap : public ClapTrap
 
 		// Destructor
 		~FragTrap(void);
-
-	private:
-		;
 };
 
 #endif

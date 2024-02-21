@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 18:20:48 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/21 11:43:35 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/21 13:26:02 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 // Create a new zombie on the heap
 Zombie*	newZombie(std::string name);
 
-// Create a new zombie on the heap and announce itself
+// Create a new zombie on the stack and announce itself
 void randomChump(std::string name);
 
 #endif

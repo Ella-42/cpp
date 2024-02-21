@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 20:39:17 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/14 22:00:05 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/21 21:54:00 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,17 @@ ScavTrap& ScavTrap::operator = (const ScavTrap& other)
 		this->_gate_keeper_mode = other._gate_keeper_mode;
 	}
 	return (*this);
+}
+
+// Attack
+void ScavTrap::attack(const std::string& target)
+{
+	if (this->_hit_points < 1)
+		return (std::cout << this->_name << " already perished\n", void());
+	if (this->_energy_points < 1)
+		return (std::cout << this->_name << " has no energy left...\n", void());
+	std::cout << this->_name << " bashes on " << target << '\n';
+	this->_energy_points -= 1;
 }
 
 // Turn on gate keeper mode

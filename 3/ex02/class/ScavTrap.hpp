@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 20:43:54 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/14 21:07:40 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/21 21:49:55 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ class	ScavTrap : public ClapTrap
 
 		// Copy assignment operator overload
 		ScavTrap& operator = (const ScavTrap& other);
+
+		// Attack
+		void attack(const std::string& target);
 
 		// Turn on gate keeper mode
 		void guardGate(void);
