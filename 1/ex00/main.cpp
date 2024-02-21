@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:47:39 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/05 18:22:44 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/21 11:46:52 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,7 @@ int	main(void)
 
 			std::cout << '\n';
 
-			Zombie* zombie = randomChump(name);
-			delete zombie;
+			randomChump(name);
 		}
 
 		else
