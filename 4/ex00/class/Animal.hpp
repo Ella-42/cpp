@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:03:58 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/15 20:42:47 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:12:45 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,6 @@ class	Animal
 
 	protected:
 		std::string type;
-
-	private:
-		;
 };
 
 #endif

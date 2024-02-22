@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:08:47 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/15 20:47:51 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/22 20:13:16 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,18 @@ class	Cat : public Animal
 		// Make cat sounds
 		void makeSound(void) const;
 
+		// Setter
+		void setIdea(std::string idea, int i);
+
+		// Getter
+		std::string getIdea(int i) const;
+		Brain* getBrainAddress(void) const;
+
 		// Destructor
 		~Cat(void);
 
-	protected:
-		;
-
 	private:
-		;
+		Brain* _brain;
 };
 
 #endif

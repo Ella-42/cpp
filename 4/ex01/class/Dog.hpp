@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 18:08:38 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 16:10:35 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/22 20:13:40 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,18 @@ class	Dog : public Animal
 		// Make dog sounds
 		void makeSound(void) const;
 
+		// Setter
+		void setIdea(std::string idea, int i);
+
+		// Getter
+		std::string getIdea(int i) const;
+		Brain* getBrainAddress(void) const;
+
 		// Destructor
 		~Dog(void);
 
-	protected:
-		;
-
 	private:
-		;
+		Brain* _brain;
 };
 
 #endif

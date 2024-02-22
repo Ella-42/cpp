@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 00:06:51 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/16 17:20:29 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:27:13 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,6 @@ class	Brain
 
 		// Destructor
 		~Brain(void);
-
-	protected:
-		;
 
 	private:
 		std::string _ideas[100];

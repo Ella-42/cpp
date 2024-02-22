@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 20:30:29 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/02/19 23:29:56 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/02/22 22:17:39 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void ft_tests()
 	std::cout << "CREATE MATERIA:" << std::endl;
 	std::cout << "-----------------------" << std::endl;
 	AMateria	*tmp;
-	
 	AMateria	*tmp1;
 	AMateria	*tmp2;
 	AMateria	*tmp3;
