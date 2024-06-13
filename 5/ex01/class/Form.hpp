@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:01:51 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/13 20:38:40 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/06/13 20:39:39 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef FORM_HPP
+# define FORM_HPP
 
 /* Includes */
 
@@ -19,18 +19,22 @@
 # include <string> //string
 # include <exception> //exception
 
-// Custom class: Bureaucrat
-class	Bureaucrat
+# include "Bureaucrat.hpp" //Bureaucrat
+
+class Bureaucrat; //Bureaucrat
+
+// Custom class: Form
+class	Form
 {
 	public:
 		// Constructor
-		Bureaucrat(const std::string& name, const short& grade);
+		Form(const std::string& name, const short& grade_sign, const short& grade_execute);
 
 		// Copy constructor
-		Bureaucrat(const Bureaucrat& other);
+		Form(const Form& other);
 
 		// Copy assignment operator overload
-		Bureaucrat& operator = (const Bureaucrat& other);
+		Form& operator = (const Form& other);
 
 		// Grade value too low exception error throw
 		class GradeTooLowException : public std::exception
@@ -51,27 +55,36 @@ class	Bureaucrat
 		// Retrieve the name of the object
 		const std::string getName(void);
 
-		// Retrieve the grade of the object
-		short getGrade(void);
+		// Retrieve the status of the object
+		short getStatus(void);
 
-		// Decrease the object's grade
-		void decrement(void);
+		// Retrieve the grade of the object for signing
+		short getGradeSign(void);
 
-		// Increase the object's grade
-		void increment(void);
+		// Retrieve the grade of the object for executing
+		short getGradeExecute(void);
+
+		// Sign form if requirements are met
+		void beSigned(Bureaucrat& bureaucrat);
 
 		// Destructor
-		~Bureaucrat(void);
+		~Form(void);
 
 	private:
 		// Object's name
 		const std::string _name;
 
-		// Object's grade
-		short _grade;
+		// Object's signing value
+		bool _is_signed;
+
+		// Object's sign grade
+		const short _grade_sign;
+
+		// Object's execute grade
+		const short _grade_execute;
 };
 
 // Output stream overload to allow easier object information printing
-std::ostream& operator<< (std::ostream& output_stream, Bureaucrat& object_bureaucrat);
+std::ostream& operator<< (std::ostream& output_stream, Form& object_form);
 
 #endif

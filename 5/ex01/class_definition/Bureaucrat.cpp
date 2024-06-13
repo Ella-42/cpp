@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:02:00 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/13 21:21:09 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/06/13 21:25:22 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,18 @@ void Bureaucrat::increment(void)
 		throw GradeTooHighException();
 
 	this->_grade--;
+}
+
+// Sign a Form
+void Bureaucrat::signForm(Form& form)
+{
+	if (form.getStatus())
+		return (std::cout << "Bureaucrat: Info: Already signed.\n", void());
+
+	if (form.getGradeSign() < this->_grade)
+		return (std::cout << this->_name << " could not sign " << form.getName() << " since their grade is too low.\n", void());
+
+	form.beSigned(*this);
 }
 
 // Destructor

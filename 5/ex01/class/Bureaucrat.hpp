@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:01:51 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/13 20:38:40 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/06/13 20:34:18 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # include <iostream> //input\output
 # include <string> //string
 # include <exception> //exception
+
+# include "Form.hpp" //Form
+
+class Form; //Form
 
 // Custom class: Bureaucrat
 class	Bureaucrat
@@ -39,7 +43,7 @@ class	Bureaucrat
 				// Error message
 				virtual const char* what() const throw();
 		};
-
+		
 		// Grade value too high exception error throw
 		class GradeTooHighException : public std::exception
 		{
@@ -60,13 +64,16 @@ class	Bureaucrat
 		// Increase the object's grade
 		void increment(void);
 
+		// Sign a Form
+		void signForm(Form& form);
+
 		// Destructor
 		~Bureaucrat(void);
 
 	private:
 		// Object's name
 		const std::string _name;
-
+	
 		// Object's grade
 		short _grade;
 };
