@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:21:09 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/17 22:50:57 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/06/18 22:34:37 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <string> //string
 # include <cctype> //isprint, isdigit
 # include <sstream> //stringsteam
+# include <limits> //min and max values for types
+# include <iomanip> //setprecision
 
 // Enumeration for the scalar types
 enum ScalarTypeIdentifiers
@@ -29,6 +31,15 @@ enum ScalarTypeIdentifiers
 	FLOAT,
 	DOUBLE,
 	PSEUDO
+};
+
+// Union for the scalar types
+union ScalarTypes
+{
+	char	c;
+	int		i;
+	float	f;
+	double	d;
 };
 
 // Custom class: ScalarConverter
@@ -49,7 +60,25 @@ class	ScalarConverter
 		ScalarConverter& operator= (const ScalarConverter& other);
 
 		// Identify incoming type
-		static short identify(const std::string& input);
+		static short identify(const std::string& input, ScalarTypes& types);
+
+		// Master printer
+		static void print(const std::string& input, const short& type, ScalarTypes& types);
+
+		// Print pseudos
+		static void print(const std::string& input);
+
+		// Print characters
+		static void print(const long double& overflow, const char& c);
+
+		// Print integers
+		static void print(const long double& overflow, const int& i);
+
+		// Print floats
+		static void print(const long double& overflow, const float& f);
+
+		// Print doubles
+		static void print(const long double& overflow, const double& d);
 
 		// Destructor
 		~ScalarConverter(void);
