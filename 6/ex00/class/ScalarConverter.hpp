@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:21:09 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/18 22:34:37 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/06/18 23:18:40 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ class	ScalarConverter
 		static short identify(const std::string& input, ScalarTypes& types);
 
 		// Master printer
-		static void print(const std::string& input, const short& type, ScalarTypes& types);
+		static void print(const std::string& input, const long double& value);
 
 		// Print pseudos
 		static void print(const std::string& input);

@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 18:17:58 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/18 23:02:53 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/06/18 23:20:03 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,17 @@ void ScalarConverter::convert(const std::string& input)
 	else if (type == PSEUDO)
 		ScalarConverter::print(input);
 
-	else
-		ScalarConverter::print(input, type, types);
+	else if (type == CHAR)
+		ScalarConverter::print(input, types.c);
+
+	else if (type == INT)
+		ScalarConverter::print(input, types.i);
+
+	else if (type == FLOAT)
+		ScalarConverter::print(input, types.f);
+
+	else if (type == DOUBLE)
+		ScalarConverter::print(input, types.d);
 }
 
 // Constructor
@@ -93,7 +102,7 @@ short ScalarConverter::identify(const std::string& input, ScalarTypes& types)
 }
 
 // Master printer
-void ScalarConverter::print(const std::string& input, const short& type, ScalarTypes& types)
+void ScalarConverter::print(const std::string& input, const long double& value)
 {
 	std::stringstream string_stream(input);
 	long double overflow;
@@ -101,37 +110,10 @@ void ScalarConverter::print(const std::string& input, const short& type, ScalarT
 
 	std::cout << std::fixed << std::setprecision(1);
 
-	if (type == CHAR)
-	{
-		ScalarConverter::print(overflow, types.c);
-		ScalarConverter::print(overflow, static_cast<int>(types.c));
-		ScalarConverter::print(overflow, static_cast<float>(types.c));
-		ScalarConverter::print(overflow, static_cast<double>(types.c));
-	}
-
-	else if (type == INT)
-	{
-		ScalarConverter::print(overflow, static_cast<char>(types.i));
-		ScalarConverter::print(overflow, types.i);
-		ScalarConverter::print(overflow, static_cast<float>(types.i));
-		ScalarConverter::print(overflow, static_cast<double>(types.i));
-	}
-
-	else if (type == FLOAT)
-	{
-		ScalarConverter::print(overflow, static_cast<char>(types.f));
-		ScalarConverter::print(overflow, static_cast<int>(types.f));
-		ScalarConverter::print(overflow, types.f);
-		ScalarConverter::print(overflow, static_cast<double>(types.f));
-	}
-
-	else if (type == DOUBLE)
-	{
-		ScalarConverter::print(overflow, static_cast<char>(types.d));
-		ScalarConverter::print(overflow, static_cast<int>(types.d));
-		ScalarConverter::print(overflow, static_cast<float>(types.d));
-		ScalarConverter::print(overflow, types.d);
-	}
+	ScalarConverter::print(overflow, static_cast<char>(value));
+	ScalarConverter::print(overflow, static_cast<int>(value));
+	ScalarConverter::print(overflow, static_cast<float>(value));
+	ScalarConverter::print(overflow, static_cast<double>(value));
 }
 
 // Print pseudos
