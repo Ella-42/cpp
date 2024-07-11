@@ -6,11 +6,11 @@
 #    By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/20 02:14:32 by lpeeters          #+#    #+#              #
-#    Updated: 2024/06/05 23:45:36 by lpeeters         ###   ########.fr        #
+#    Updated: 2024/07/09 08:34:16 by lpeeters         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-program_name = test
+program_name = btc
 
 compiler = c++
 
