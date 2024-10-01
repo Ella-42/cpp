@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:30:11 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/13 21:27:57 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:24:41 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int	main(void)
 
 			Bart->signForm(*Trans_Rights);
 
+			Bart->signForm(*Trans_Rights);
 			Trans_Rights->beSigned(*Bart);
 		}
 

@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:02:00 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/13 21:25:06 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:23:12 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,14 @@ short Form::getGradeExecute(void)
 void Form::beSigned(Bureaucrat& bureaucrat)
 {
 	if (this->_is_signed)
-		return (std::cout << "Form: Info: Already signed.\n", void());
+		return (std::cout << "Form '" << this->_name  << "' was already signed.\n", void());
 
 	if (bureaucrat.getGrade() > this->_grade_sign)
 		throw (GradeTooLowException());
 
 	this->_is_signed = true;
+
+	std::cout << "Bureaucrat '" << bureaucrat.getName() << "' signed Form '" << this->_name << "'.\n";
 }
 
 // Destructor
@@ -107,7 +109,7 @@ std::ostream& operator<< (std::ostream& output_stream, Form& object_form)
 	else
 		status = "unsigned";
 
-	output_stream << object_form.getName() << " has a sign grade requirement of " << object_form.getGradeSign() << " and an execute grade requirement of " << object_form.getGradeExecute() << ", it is currently " << status << ".\n";
+	output_stream << "Form '" << object_form.getName() << "' has a sign grade requirement of " << object_form.getGradeSign() << " and an execute grade requirement of " << object_form.getGradeExecute() << ", it is currently " << status << ".\n";
 
 	return (output_stream);
 }

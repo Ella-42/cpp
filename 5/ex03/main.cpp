@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:30:11 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/14 22:42:13 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/01 19:37:07 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,10 @@ int	main(void)
 		AForm* ShrubberyCreation;
 		AForm* RobotomyRequest;
 		AForm* PresidentialPardon;
-		AForm* Test;
 
 		try
 		{
-			Test = Alex.makeForm("test", "test");
+			Alex.makeForm("test", "test");
 		}
 
 		catch (std::exception& error)
@@ -45,6 +44,8 @@ int	main(void)
 		try
 		{
 			ShrubberyCreation = Alex.makeForm("shrubbery creation", "Garden");
+
+			std::cout << *ShrubberyCreation;
 		}
 
 		catch (std::exception& error)
@@ -52,6 +53,7 @@ int	main(void)
 			std::cerr << error.what();
 		}
 
+		std::cout << "\nShrubbery destruction:\n";
 		delete ShrubberyCreation;
 
 		std::cout << "\nRobotomy request:\n";
@@ -59,6 +61,8 @@ int	main(void)
 		try
 		{
 			RobotomyRequest = Alex.makeForm("robotomy request", "A fool");
+
+			std::cout << *RobotomyRequest;
 		}
 
 		catch (std::exception& error)
@@ -66,6 +70,7 @@ int	main(void)
 			std::cerr << error.what();
 		}
 
+		std::cout << "\nRobotomy destruction:\n";
 		delete RobotomyRequest;
 
 		std::cout << "\nPresidential pardon:\n";
@@ -73,6 +78,8 @@ int	main(void)
 		try
 		{
 			PresidentialPardon = Alex.makeForm("presidential pardon", "Obama");
+
+			std::cout << *PresidentialPardon;
 		}
 
 		catch (std::exception& error)
@@ -80,6 +87,7 @@ int	main(void)
 			std::cerr << error.what();
 		}
 
+		std::cout << "\nPresidential destruction:\n";
 		delete PresidentialPardon;
 	}
 
@@ -90,50 +98,48 @@ int	main(void)
 }
 
 //int main(void) {
-	//std::srand(std::time(NULL));
-    
-    //Intern someRandomIntern;
-    
-    //AForm* scf;
-    
-    //try {
-        //scf = someRandomIntern.makeForm("shrubbery creation", "Richard");
-    //}
-    //catch (std::exception& e) {
-        //std::cerr << e.what() << std::endl;
-    //}
+	//Intern someRandomIntern;
+	
+	//AForm* scf;
+	
+	//try {
+		//scf = someRandomIntern.makeForm("shrubbery creation", "Richard");
+	//}
+	//catch (std::exception& e) {
+		//std::cerr << e.what() << std::endl;
+	//}
 
-    //std::cout << *scf << std::endl;
+	//std::cout << *scf << std::endl;
 
 	//delete scf;
 
-    //std::cout << std::endl;
+	//std::cout << std::endl;
 
-    //AForm* rrf;
-    
-    //try {
-        //rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-    //}
-    //catch (std::exception& e) {
-        //std::cerr << e.what() << std::endl;
-    //}
+	//AForm* rrf;
+	
+	//try {
+		//rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	//}
+	//catch (std::exception& e) {
+		//std::cerr << e.what() << std::endl;
+	//}
 
-    //std::cout << *rrf << std::endl;
+	//std::cout << *rrf << std::endl;
 
 	//delete rrf;
 
-    //std::cout << std::endl;
-    
-    //AForm* ppf;
-    
-    //try {
-        //ppf = someRandomIntern.makeForm("presidential pardon", "Hector");
-    //}
-    //catch (std::exception& e) {
-        //std::cerr << e.what() << std::endl;
-    //}
+	//std::cout << std::endl;
+	
+	//AForm* ppf;
+	
+	//try {
+		//ppf = someRandomIntern.makeForm("presidential pardon", "Hector");
+	//}
+	//catch (std::exception& e) {
+		//std::cerr << e.what() << std::endl;
+	//}
 
-    //std::cout << *ppf << std::endl;
+	//std::cout << *ppf << std::endl;
 
 	//delete ppf;
 //}

@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 20:49:35 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/14 22:44:35 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/01 19:19:23 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ Intern& Intern::operator= (const Intern& other)
 {
 	std::cout << "Intern: copying object (assignement)\n";
 
-	if (this != &other)
-		/*this->_ = other._*/;
+	(void)other;
 
 	return (*this);
 }

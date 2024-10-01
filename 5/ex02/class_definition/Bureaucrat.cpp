@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:02:00 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/14 18:03:30 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:44:50 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,10 @@ void Bureaucrat::increment(void)
 void Bureaucrat::signForm(AForm& form)
 {
 	if (form.getStatus())
-		return (std::cout << "Bureaucrat: Info: Already signed.\n", void());
+		return (std::cout << "Bureaucrat '" << this->_name << "' could not sign Form '" << form.getName() << "' since it was already signed.\n", void());
 
 	if (form.getGradeSign() < this->_grade)
-		return (std::cout << this->_name << " could not sign " << form.getName() << " since their grade is too low.\n", void());
+		return (std::cout << "Bureaucrat '" << this->_name << "' could not sign Form '" << form.getName() << "' since their grade is too low.\n", void());
 
 	form.beSigned(*this);
 }
@@ -122,7 +122,7 @@ Bureaucrat::~Bureaucrat(void)
 // Output stream overload to allow easier object information printing
 std::ostream& operator<< (std::ostream& output_stream, Bureaucrat& object_bureaucrat)
 {
-	output_stream << object_bureaucrat.getName() << " is in grade " << object_bureaucrat.getGrade() << ".\n";
+	output_stream << "Bureaucrat '" << object_bureaucrat.getName() << "' is in grade " << object_bureaucrat.getGrade() << ".\n";
 
 	return (output_stream);
 }

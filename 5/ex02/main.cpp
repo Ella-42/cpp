@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:30:11 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/06/14 20:04:32 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:59:05 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	Shrubbery_test(void)
 	{
 		std::cout << "\nInitialization:\n";
 
-		Bureaucrat Bart("Bart", 150);
+		Bureaucrat Bart("Bart", 3);
 		ShrubberyCreationForm Shrubbery("Garden");
 
 		try
