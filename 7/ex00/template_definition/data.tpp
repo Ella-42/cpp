@@ -24,14 +24,14 @@ void swap(type& x, type& y)
 
 // Return whichever variable has lowest value
 template <typename type>
-type min(type& x, type& y)
+const type& min(const type& x, const type& y)
 {
 	return (x < y ? x : y);
 }
 
 // Return whichever variable has highest value
 template <typename type>
-type max(type& x, type& y)
+const type& max(const type& x, const type& y)
 {
 	return (x > y ? x : y);
 }

@@ -19,21 +19,17 @@
 // Constructor
 template <typename type>
 Array<type>::Array(void):
-_size(0)
+_array(NULL), _size(0)
 {
 	std::cout << "Array: creating object\n";
-
-	this->_array = new type[this->_size];
 }
 
 // Constructor
 template <typename type>
 Array<type>::Array(unsigned int n):
-_size(n)
+_array(new type[n]), _size(n)
 {
 	std::cout << "Array: creating object\n";
-
-	this->_array = new type[this->_size];
 
 	for (size_t i = 0; i < this->_size; i++)
 		this->_array[i] = type();
@@ -42,11 +38,9 @@ _size(n)
 // Copy constructor
 template <typename type>
 Array<type>::Array(const Array& other):
-_size(other._size)
+_array(new type[other._size]), _size(other._size)
 {
 	std::cout << "Array: copying object\n";
-
-	this->_array = new type[this->_size];
 
 	for (size_t i = 0; i < this->_size; i++)
 		this->_array[i] = other._array[i];
@@ -72,7 +66,7 @@ Array<type>& Array<type>::operator= (const Array<type>& other)
 	return (*this);
 }
 
-// operator overload
+// Subscript operator overload
 template <typename type>
 type& Array<type>::operator[] (size_t i)
 {
