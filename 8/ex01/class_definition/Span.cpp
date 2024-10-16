@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 19:24:43 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/07/08 14:06:56 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/10 22:52:42 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ unsigned int Span::longestSpan(void)
 // No lambda :(
 int Span::_generate_random_number(void)
 {
-	return (std::rand() % 10000);
+	return (std::rand() % std::numeric_limits<int>::max());
 }
 
 // Lazy? I generate for you :)

@@ -18,18 +18,18 @@
 			
 // Constructor
 template <typename type>
-MutantStack<type>::MutantStack(void)
+MutantStack<type>::MutantStack(void):
+std::stack<type>()
 {
 	std::cout << "MutantStack: Creating object\n";
 }
 
 // Copy constructor
 template <typename type>
-MutantStack<type>::MutantStack(const MutantStack& other)
+MutantStack<type>::MutantStack(const MutantStack& other):
+std::stack<type>(other)
 {
 	std::cout << "MutantStack: Copying object\n";
-
-	(void)other;
 }
 
 // Copy assignment operator overload
@@ -38,7 +38,10 @@ MutantStack<type>& MutantStack<type>::operator= (const MutantStack& other)
 {
 	std::cout << "MutantStack: Copying object (assignment)\n";
 
-	(void)other;
+	if (this != &other)
+		this->c = other.c;
+
+	return (*this);
 }
 
 // Iterator to beginning of underlying container
