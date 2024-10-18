@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 19:24:43 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/10/10 22:52:42 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/18 20:01:48 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,11 @@ int Span::_generate_random_number(void)
 // Lazy? I generate for you :)
 void Span::generate(void)
 {
+	size_t offset = this->_int_vector.size();
+
 	this->_int_vector.resize(this->_size);
 
-	std::generate(this->_int_vector.begin(), this->_int_vector.end(), this->_generate_random_number);
+	std::generate(this->_int_vector.begin() + offset, this->_int_vector.end(), this->_generate_random_number);
 }
 
 // Destructor

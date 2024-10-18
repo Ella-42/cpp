@@ -6,7 +6,7 @@
 /*   By: lpeeters <lpeeters@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 19:45:09 by lpeeters          #+#    #+#             */
-/*   Updated: 2024/10/10 22:50:42 by lpeeters         ###   ########.fr       */
+/*   Updated: 2024/10/18 19:42:17 by lpeeters         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,9 @@ int main(void) {
 	std::cout << std::endl;
 
 	Span sp4(5);
+
+    sp4.addNumber(42);
+    sp4.addNumber(19);
 
     sp4.generate();
     std::cout << "Longest span: " << sp4.longestSpan() << std::endl;
